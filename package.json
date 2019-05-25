@@ -1,0 +1,36 @@
+{
+  "name": "proxy-http",
+  "version": "1.0.0",
+  "description": "基于node http(s)的轻量代理服务器",
+  "main": "index.js",
+  "scripts": {
+    "test-server1": "node test/express-target-server.js",
+    "test-server2": "node test/express-test-server.js",
+    "test": "nyc mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FE-xiaoJiang/proxy-http.git"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "proxy"
+  ],
+  "author": "FE-xiaojiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FE-xiaoJiang/proxy-http/issues"
+  },
+  "homepage": "https://github.com/FE-xiaoJiang/proxy-http#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
