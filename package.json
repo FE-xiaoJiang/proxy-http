@@ -6,7 +6,7 @@
   "scripts": {
     "test-server1": "node test/express-target-server.js",
     "test-server2": "node test/express-test-server.js",
-    "test": "nyc mocha test/index.js"
+    "test": "mocha test/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/FE-xiaoJiang/proxy-http#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
     "express": "^4.17.0"
   },
   "devDependencies": {

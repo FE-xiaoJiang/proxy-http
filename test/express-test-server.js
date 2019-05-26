@@ -15,6 +15,14 @@ app.use(function(req, res, next) {
     }
     
 })
+app.all('/test_with_body', function(req, res, next) {
+    proxy(req, res, {
+        host: 'localhost',
+        port: '3000',
+        useHttps: false,
+        noPreBodyParser: true,
+    });
+});
 app.all('/test', function(req, res, next) {
     proxy(req, res, {
         host: 'localhost',
@@ -24,7 +32,6 @@ app.all('/test', function(req, res, next) {
     });
 });
 app.use(function(req, res, next) {
-    console.log('===========test========', req.url);
     proxy(req, res, {
         host: 'localhost',
         port: '3000',
